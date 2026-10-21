@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Balance Scale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stage">
+    <!-- Scale parts. Sizes and positions are set in style.css / script.js in stage pixels. -->
+    <img id="beam" src="assets/images/beam.png" alt="" draggable="false">
+
+    <div id="pan-left" class="pan" data-side="left">
+      <img class="pan-art" src="assets/images/pan-left.png" alt="Left pan" draggable="false">
+      <div class="pile"></div>
+    </div>
+    <div id="pan-right" class="pan" data-side="right">
+      <img class="pan-art" src="assets/images/pan-right.png" alt="Right pan" draggable="false">
+      <div class="pile"></div>
+    </div>
+
+    <img id="pivot-cap" src="assets/images/pivot-cap.png" alt="" draggable="false">
+    <img id="needle" src="assets/images/needle.png" alt="" draggable="false">
+
+    <!-- Tray tiles are built from the ITEMS array in script.js -->
+    <div id="tray"></div>
+
+    <button id="reset" type="button" aria-label="Reset: put every item back in the tray">&#8634; Reset</button>
+  </div>
+
+  <p id="status" class="sr-only" aria-live="polite"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
